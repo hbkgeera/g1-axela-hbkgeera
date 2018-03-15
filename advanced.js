@@ -1,13 +1,13 @@
 (function () {
 
-  var input,
-      submit,
-      message,
-      advancedDiv,
+  var input = document.querySelector("#axela-input"),
+      submit = document.querySelector("#axela-submit"),
+      message = document.querySelector("#axela-message"),
+      advancedDiv = document.querySelector("#advanced"),
       errorText = "I don't understand you.",
       dunnoText = "I wasn't programmed to know that.",
       picture = null,
-      greetings = ["hi", "sup", "hello", "hola", "wasup"];
+      greetings = ['hi', 'sup', 'hello', 'hola', 'wasup'];
 
   // Add event listeners to text input and submit button below
   input.addEventListener("keypress", checkKey);
@@ -48,6 +48,52 @@
       the message element to errorText.
    */
 
+
+   function processInput() {
+     if(advancedDiv.contains(picture)) {
+       picture.removeChild();
+     }
+     var words = input.value.toLowerCase().trim().split(" ");
+     input.value = '';
+
+     if(words.length == 1) {
+       if(greetings.indexOf(words[0]) > -1) {
+         message.innerHTML = 'Greetings!';
+       } else {
+         message.innerHTML = errorText;
+       }
+     }else if(words.length == 2) {
+       switch (words[0]) {
+         case "who":
+          who(words[1]);
+           break;
+         case "what":
+         what(words[1]);
+            break;
+          case "where":
+          where(words[1]);
+            break;
+           case "tell":
+           tell(words[1]);
+             break;
+          case "show":
+          show(words[1]);
+              break;
+         default:
+         message.innerHTML = errorText;
+
+       }
+
+     }else {
+        message.innerHTML = errorText;
+
+     }
+
+     }
+
+
+
+
   /*
    * who(word)
    * This function sets the innerHTML of the message element to specific text,
@@ -62,26 +108,92 @@
      dunnoText, NOT errorText (since it's not an error per se, Axela just
      doesn't know what they're referring to.)
    */
+  function who (word){
+    switch (word) {
+      case 'you':
+     message.innerHTML= 'I am alexa of course'
+        break;
+      case 'me':
+      message.innerHTML = 'you are you'
+      break;
+      case 'cool':
+      message.innerHTML = 'not coach wolf'
+      break;w
+      default:
+              message.innerHTML = 'noooooSheWasntttReadyyy';
+
+    }
+  }
 
   /*
    * what(word)
    * See above.
    */
+   function what (word){
+     switch (word) {
+       case 'love':
+       message.innerHTML= 'an intense feeling of deep affection.'
+       break;
+       case 'life':
+       message.innerHTML = 'the condition that distinguishes animals and plants from inorganic matter, including the capacity for growth, reproduction, functional activity, and continual change preceding death.'
+       break;
+       case 'animal':
+       message.innerHTML = 'the lion of course'
+       break;
+       default:
+               message.innerHTML = 'noooooSheWasntttReadyyy';
+             }
+           }
+
 
   /*
    * where(word)
    * See above.
    */
+   function where (word){
+     switch (word) {
+       case 'me':
+       message.innerHTML= 'at your location duh'
+       break;
+       case 'atlantis':
+       message.innerHTML = 'somewhere under whater'
+       break;
+       case 'food':
+       message.innerHTML = 'the chimichanga'
+       break;
+       default:
+               message.innerHTML = 'noooooSheWasntttReadyyy';
+             }
+           }
+
 
   /*
    * tell(word)
    * See above.
    */
+   function tell (word){
+     switch (word) {
+       case 'joke':
+       message.innerHTML= 'what do you call a chicken with no legs? ... a legless chicken'
+       break;
+       case 'poem':
+       message.innerHTML = 'roses are red violets are blue you smell like, elephant poo'
+       break;
+       case 'quote':
+       message.innerHTML = 'natural selection is anything but random'
+       break;
+       default:
+               message.innerHTML = 'noooooSheWasntttReadyyy';
+             }
+           }
+
+
 
   /*
    * show(word)
    * See above.
    */
+
 
 
 })();
