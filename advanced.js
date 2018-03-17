@@ -193,6 +193,17 @@
    * show(word)
    * See above.
    */
+   function show(word){
+     switch(word){
+       case 'dinosoar':
+       message.innerHTML = 'here is the dinosoar';
+       picture = document.createElement('img');
+       picture.src = 'img/dino.jpeg';
+       advancedDiv.appendChild(picture);
+
+
+     }
+   }
 
 
 
