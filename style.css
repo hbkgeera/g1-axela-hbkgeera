@@ -13,4 +13,25 @@ body div {
 .color{
   background: linear-gradient(to right, #000066 0%, #33ccff 100%);
 
+
+}
+.color1{
+   background: linear-gradient(to left, #000066 0%, #0099cc 100%);
+}
+.image{
+  height: 600px;
+  width: 700px;
+}
+#axela-input{
+  width:400px;
+  height:50px;
+  background-color:blue;
+  font-size: 24px;
+}
+#axela-submit{
+  background-color: blue;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height:30px;
 }

@@ -4,7 +4,7 @@
       submit = document.querySelector("#axela-submit"),
       message = document.querySelector("#axela-message"),
       advancedDiv = document.querySelector("#advanced"),
-      errorText = "I don't understand you.",
+      errorText = "noooooSheWasntttReadyyy",
       dunnoText = "I wasn't programmed to know that.",
       picture = null,
       greetings = ['hi', 'sup', 'hello', 'hola', 'wasup'];
@@ -111,14 +111,20 @@
   function who (word){
     switch (word) {
       case 'you':
-     message.innerHTML= 'I am alexa of course'
+     message.innerHTML= 'I am Flow Hcaoc of course'
+     var one = new Audio('audio/flow.mp3');
+     one.play();
         break;
       case 'me':
       message.innerHTML = 'you are you'
+      var two = new Audio('audio/i.mp3');
+      two.play();
       break;
       case 'cool':
       message.innerHTML = 'not coach wolf'
-      break;w
+      var audio = new Audio('audio/no.mp3');
+      audio.play();
+      break;
       default:
               message.innerHTML = 'noooooSheWasntttReadyyy';
 
