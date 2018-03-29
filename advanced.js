@@ -51,7 +51,7 @@
 
    function processInput() {
      if(advancedDiv.contains(picture)) {
-       picture.removeChild();
+       advancedDiv.removeChild(picture);
      }
      var words = input.value.toLowerCase().trim().split(" ");
      input.value = '';
@@ -112,21 +112,23 @@
     switch (word) {
       case 'you':
      message.innerHTML= 'I am Flow Hcaoc of course'
-     var one = new Audio('audio/flow.mp3');
-     one.play();
+     var msg = new SpeechSynthesisUtterance('I am Flow Hcaoc of course');
+     window.speechSynthesis.speak(msg);
         break;
       case 'me':
       message.innerHTML = 'you are you'
-      var two = new Audio('audio/i.mp3');
-      two.play();
+      var msg = new SpeechSynthesisUtterance('you are you');
+      window.speechSynthesis.speak(msg);
       break;
       case 'cool':
       message.innerHTML = 'not coach wolf'
-      var audio = new Audio('audio/no.mp3');
-      audio.play();
+      var msg = new SpeechSynthesisUtterance('not coach wolf');
+      window.speechSynthesis.speak(msg);
       break;
       default:
               message.innerHTML = 'noooooSheWasntttReadyyy';
+              var msg = new SpeechSynthesisUtterance('nooooo She Wasnttt Readyyy');
+              window.speechSynthesis.speak(msg);
 
     }
   }
@@ -148,6 +150,8 @@
        break;
        default:
                message.innerHTML = 'noooooSheWasntttReadyyy';
+               var msg = new SpeechSynthesisUtterance('nooooo She Wasnttt Readyyy');
+               window.speechSynthesis.speak(msg);
              }
            }
 
@@ -169,6 +173,8 @@
        break;
        default:
                message.innerHTML = 'noooooSheWasntttReadyyy';
+               var msg = new SpeechSynthesisUtterance('nooooo She Wasnttt Readyyy');
+               window.speechSynthesis.speak(msg);
              }
            }
 
@@ -180,7 +186,9 @@
    function tell (word){
      switch (word) {
        case 'joke':
-       message.innerHTML= 'what do you call a chicken with no legs? ... a legless chicken'
+       message.innerHTML= 'what do you call a chicken with no legs? ... a legless chicken';
+       var msg = new SpeechSynthesisUtterance('what do you call a chicken with no legs? ... a legless chicken');
+       window.speechSynthesis.speak(msg);
        break;
        case 'poem':
        message.innerHTML = 'roses are red violets are blue you smell like, elephant poo'
@@ -190,6 +198,8 @@
        break;
        default:
                message.innerHTML = 'noooooSheWasntttReadyyy';
+               var msg = new speechSynthesisUtterance('noooooSheWasntttReadyyy');
+               window.speachSinthesis.speak(msg);
              }
            }
 
